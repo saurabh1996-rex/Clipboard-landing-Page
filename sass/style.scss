@@ -1,0 +1,197 @@
+@import "variables";
+@import "common";
+
+body {
+  font-family: var(--Font);
+  text-align: center;
+  color: var(--Grayish-Blue);
+  .one {
+    background-image: url("../images/bg-header-mobile.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 10rem 2rem 5rem 2rem;
+    a {
+      svg {
+        margin-bottom: 3rem;
+      }
+    }
+    h1 {
+      margin-bottom: 1rem;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+  h1,
+  h2 {
+    color: var(--Dark-Grayish-Blue);
+  }
+
+  .btns {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    button {
+      outline: none;
+      border: none;
+      color: #fff;
+      font-family: var(--Font);
+      border-radius: 5rem;
+      padding: 1rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .ios {
+      margin-bottom: 1rem;
+      background-color: var(--Strong-Cyan);
+      box-shadow: 0px 3px 1px 0px hsl(171, 66%, 38%);
+
+      &:hover {
+        background-color: hsl(171, 66%, 50%);
+        box-shadow: 0px 3px 12px -3px hsl(171, 66%, 50%);
+      }
+    }
+    .mac {
+      background-color: var(--Light-Blue);
+      box-shadow: 0px 3px 1px 0px hsl(233, 100%, 62%);
+      &:hover {
+        background-color: hsl(233, 100%, 75%);
+        box-shadow: 0px 3px 12px -3px hsl(233, 100%, 75%);
+      }
+    }
+  }
+
+  .maincontainer {
+    margin-top: 2rem;
+    .container {
+      padding: 2rem;
+      h2 {
+        margin-bottom: 1rem;
+      }
+      img {
+        margin-top: 3rem;
+        width: 100%;
+      }
+      .icons {
+        width: auto;
+      }
+    }
+    .images {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img {
+        margin-top: 0;
+        padding: 2rem;
+      }
+    }
+  }
+  .last {
+    padding: 2rem 2rem 6rem 2rem;
+    h1 {
+      margin-bottom: 1rem;
+    }
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+  footer {
+    background-color: hsl(201, 11%, 85%);
+    padding: 2.5rem 5rem;
+    img {
+      width: 25%;
+      margin-bottom: 2rem;
+    }
+    ul {
+      list-style: none;
+      li {
+        padding-bottom: 1rem;
+        a {
+          text-decoration: none;
+          color: var(--Dark-Grayish-Blue);
+          font-weight: 600;
+          transition: all 0.3s ease;
+
+          &:hover {
+            color: var(--Strong-Cyan);
+          }
+        }
+      }
+    }
+    .sociallinks {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .social {
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 70%;
+        li {
+          padding-bottom: 0;
+          a {
+            display: flex;
+            justify-content: center;
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media(min-width:690px){
+    body{
+        .one{
+            background-image: url(../images/bg-header-desktop.png);
+            p{
+                padding: 0 5rem;
+            }
+        }
+        .flextry{
+            display: flex;
+            justify-content: center;
+            .btns{
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 55%;
+                button{
+                    padding: 1rem 1.5rem;
+                }
+                .ios{
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .container{
+            p{
+                padding: 0 5rem;
+            }
+        }
+    }
+}
+
+@media (min-width:1024px){
+    body{
+        .one{
+            p{
+                padding: 0 20rem;
+            }
+        }
+        .flextry{
+            .btns{
+                width: 45%;
+            }
+        }
+        .container{
+            p{
+                padding: 0 20rem;
+  
+            }
+        }
+    }
+}
