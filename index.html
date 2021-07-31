@@ -7,6 +7,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <link rel="stylesheet" href="sass/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
   
   <title>Frontend Mentor | Clipboard landing page</title>
 
@@ -50,7 +52,14 @@
   </div>
 
   <div class="subcontainer">
-    <img src="images/image-computer.png" alt="computer" class="device">
+    <img src="images/image-computer.png" alt="computer" class="device" data-aos="fade-up"
+    data-aos-offset="100"
+    data-aos-delay="10"
+    data-aos-duration="500"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-bottom">
 
 
     <div class="cont">
@@ -93,7 +102,14 @@
   <p>
     Whether you’re on the go, or at your computer, you can access all your Clipboard 
     snippets in a few simple clicks.</p>
-    <img src="images/image-devices.png" alt="devices" class="device">
+    <img src="images/image-devices.png" alt="devices" class="device" data-aos="fade-up"
+    data-aos-offset="100"
+    data-aos-delay="10"
+    data-aos-duration="500"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-bottom">
 </div>
 
 
@@ -132,11 +148,46 @@
   
   <div class="maincontainer">
     <div class="container images">
-      <img src="images/logo-google.png" alt="google" class="icons">
-      <img src="images/logo-ibm.png" alt="IBM" class="icons">
-      <img src="images/logo-microsoft.png" alt="microsoft" class="icons">
-      <img src="images/logo-hp.png" alt="hp" class="icons">
-      <img src="images/logo-vector-graphics.png" alt="graphics" class="icons">
+      <img src="images/logo-google.png" alt="google" class="icons" data-aos="slide-up"
+      data-aos-offset="50"
+      data-aos-delay="5"
+      data-aos-duration="500"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false"
+      data-aos-anchor-placement="top-bottom">
+      <img src="images/logo-ibm.png" alt="IBM" class="icons"data-aos="slide-up"
+      data-aos-offset="50"
+      data-aos-delay="10"
+      data-aos-duration="500"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false"
+      data-aos-anchor-placement="top-bottom">
+      <img src="images/logo-microsoft.png" alt="microsoft" class="icons"data-aos="slide-up"
+      data-aos-offset="50"
+      data-aos-delay="15"
+      data-aos-duration="500"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false"
+      data-aos-anchor-placement="top-bottom">
+      <img src="images/logo-hp.png" alt="hp" class="icons"data-aos="slide-up"
+      data-aos-offset="50"
+      data-aos-delay="20"
+      data-aos-duration="500"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false"
+      data-aos-anchor-placement="top-bottom">
+      <img src="images/logo-vector-graphics.png" alt="graphics" class="icons"data-aos="slide-up"
+      data-aos-offset="50"
+      data-aos-delay="25"
+      data-aos-duration="500"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false"
+      data-aos-anchor-placement="top-bottom">
     </div>
     
       
@@ -185,5 +236,10 @@
       Coded by <a href="#">Saurabh</a>.
     </p>
   </footer>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
 </body>
 </html>
