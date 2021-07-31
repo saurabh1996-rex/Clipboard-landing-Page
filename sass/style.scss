@@ -45,6 +45,8 @@ body {
       margin-bottom: 1rem;
       background-color: var(--Strong-Cyan);
       box-shadow: 0px 3px 1px 0px hsl(171, 66%, 38%);
+      animation-name: opacity;
+      animation-duration: 0.5s;
 
       &:hover {
         background-color: hsl(171, 66%, 50%);
@@ -54,6 +56,9 @@ body {
     .mac {
       background-color: var(--Light-Blue);
       box-shadow: 0px 3px 1px 0px hsl(233, 100%, 62%);
+      animation-name: opacity1;
+      animation-duration: 0.5s;
+
       &:hover {
         background-color: hsl(233, 100%, 75%);
         box-shadow: 0px 3px 12px -3px hsl(233, 100%, 75%);
@@ -68,12 +73,18 @@ body {
       h2 {
         margin-bottom: 1rem;
       }
-      img {
-        margin-top: 3rem;
+      .device {
+        padding: 3rem 0;
         width: 100%;
       }
       .icons {
         width: auto;
+      }
+    }
+    .subcontainer {
+      img {
+        padding: 3rem 2rem;
+        width: 100%;
       }
     }
     .images {
@@ -135,63 +146,164 @@ body {
             display: flex;
             justify-content: center;
             font-size: 1.5rem;
+            &:hover {
+              font-size: 2rem;
+            }
           }
         }
       }
     }
   }
+  @keyframes opacity {
+    from {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes opacity1 {
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
-
-@media(min-width:690px){
-    body{
-        .one{
-            background-image: url(../images/bg-header-desktop.png);
-            p{
-                padding: 0 5rem;
-            }
-        }
-        .flextry{
-            display: flex;
-            justify-content: center;
-            .btns{
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                width: 55%;
-                button{
-                    padding: 1rem 1.5rem;
-                }
-                .ios{
-                    margin-bottom: 0;
-                }
-            }
-        }
-        .container{
-            p{
-                padding: 0 5rem;
-            }
-        }
+@media (min-width: 690px) {
+  body {
+    .one {
+      background-image: url(../images/bg-header-desktop.png);
+      p {
+        padding: 0 5rem;
+      }
     }
+    .flextry {
+      display: flex;
+      justify-content: center;
+      .btns {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 55%;
+        button {
+          padding: 1rem 1.5rem;
+        }
+        .ios {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .container {
+      p {
+        padding: 0 5rem;
+      }
+    }
+    .last {
+      padding: 5rem;
+      p {
+        padding: 0 5rem;
+      }
+    }
+  }
 }
 
-@media (min-width:1024px){
-    body{
-        .one{
-            p{
-                padding: 0 20rem;
-            }
-        }
-        .flextry{
-            .btns{
-                width: 45%;
-            }
-        }
-        .container{
-            p{
-                padding: 0 20rem;
-  
-            }
-        }
+@media (min-width: 1024px) {
+  body {
+    .one {
+      p {
+        padding: 0 20rem;
+      }
     }
+    .flextry {
+      .btns {
+        width: 35%;
+        button {
+          padding: 1rem 2rem;
+        }
+      }
+    }
+    .container {
+      p {
+        padding: 0 20rem;
+      }
+    }
+    .maincontainer {
+      .subcontainer {
+        display: flex;
+        align-items: center;
+        .device {
+          width: 50%;
+        }
+        .cont {
+          text-align: left;
+          .container {
+            p {
+              padding: 0 10rem 0 0;
+            }
+          }
+        }
+      }
+
+      .container {
+        .device {
+          width: 50%;
+        }
+      }
+
+      .flex {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        .container {
+          padding: 2rem 4rem;
+          p {
+            padding: 0;
+          }
+        }
+      }
+
+      .images {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        place-items: center;
+        padding: 2rem 5rem 5rem 5rem;
+        img {
+          padding: 0;
+        }
+      }
+    }
+    .last {
+      padding: 2rem 2rem 5rem 2rem;
+      p {
+        padding: 0 20rem;
+      }
+    }
+    footer {
+      .grid {
+        display: grid;
+        place-items: center;
+        grid-template-columns: 1fr 2fr 1fr;
+        padding-bottom: 3rem;
+        img {
+          width: 15%;
+          margin-bottom: 0;
+        }
+        ul {
+          display: grid;
+          grid-gap: 2rem;
+          grid-template-columns: repeat(3, 1fr);
+          li {
+            text-align: left;
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
 }

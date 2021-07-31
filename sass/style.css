@@ -72,6 +72,10 @@ body .btns .ios {
   background-color: var(--Strong-Cyan);
   -webkit-box-shadow: 0px 3px 1px 0px #21a18e;
           box-shadow: 0px 3px 1px 0px #21a18e;
+  -webkit-animation-name: opacity;
+          animation-name: opacity;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
 
 body .btns .ios:hover {
@@ -84,6 +88,10 @@ body .btns .mac {
   background-color: var(--Light-Blue);
   -webkit-box-shadow: 0px 3px 1px 0px #3d54ff;
           box-shadow: 0px 3px 1px 0px #3d54ff;
+  -webkit-animation-name: opacity1;
+          animation-name: opacity1;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
 
 body .btns .mac:hover {
@@ -104,13 +112,18 @@ body .maincontainer .container h2 {
   margin-bottom: 1rem;
 }
 
-body .maincontainer .container img {
-  margin-top: 3rem;
+body .maincontainer .container .device {
+  padding: 3rem 0;
   width: 100%;
 }
 
 body .maincontainer .container .icons {
   width: auto;
+}
+
+body .maincontainer .subcontainer img {
+  padding: 3rem 2rem;
+  width: 100%;
 }
 
 body .maincontainer .images {
@@ -216,6 +229,62 @@ body footer .sociallinks .social li a {
   font-size: 1.5rem;
 }
 
+body footer .sociallinks .social li a:hover {
+  font-size: 2rem;
+}
+
+@-webkit-keyframes opacity {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes opacity1 {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes opacity1 {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 @media (min-width: 690px) {
   body .one {
     background-image: url(../images/bg-header-desktop.png);
@@ -253,6 +322,12 @@ body footer .sociallinks .social li a {
   body .container p {
     padding: 0 5rem;
   }
+  body .last {
+    padding: 5rem;
+  }
+  body .last p {
+    padding: 0 5rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -260,10 +335,85 @@ body footer .sociallinks .social li a {
     padding: 0 20rem;
   }
   body .flextry .btns {
-    width: 45%;
+    width: 35%;
+  }
+  body .flextry .btns button {
+    padding: 1rem 2rem;
   }
   body .container p {
     padding: 0 20rem;
+  }
+  body .maincontainer .subcontainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .maincontainer .subcontainer .device {
+    width: 50%;
+  }
+  body .maincontainer .subcontainer .cont {
+    text-align: left;
+  }
+  body .maincontainer .subcontainer .cont .container p {
+    padding: 0 10rem 0 0;
+  }
+  body .maincontainer .container .device {
+    width: 50%;
+  }
+  body .maincontainer .flex {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  body .maincontainer .flex .container {
+    padding: 2rem 4rem;
+  }
+  body .maincontainer .flex .container p {
+    padding: 0;
+  }
+  body .maincontainer .images {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+    place-items: center;
+    padding: 2rem 5rem 5rem 5rem;
+  }
+  body .maincontainer .images img {
+    padding: 0;
+  }
+  body .last {
+    padding: 2rem 2rem 5rem 2rem;
+  }
+  body .last p {
+    padding: 0 20rem;
+  }
+  body footer .grid {
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    -ms-grid-columns: 1fr 2fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
+    padding-bottom: 3rem;
+  }
+  body footer .grid img {
+    width: 15%;
+    margin-bottom: 0;
+  }
+  body footer .grid ul {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 2rem;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  body footer .grid ul li {
+    text-align: left;
+    padding-bottom: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
